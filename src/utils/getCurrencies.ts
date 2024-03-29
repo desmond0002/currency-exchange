@@ -32,7 +32,7 @@ export const getCurrenciesByPeriod = async(from: string, to: string) => {
   const diffFullVacation =
     Math.round(
       Math.abs((finishDate.getTime() - startDate.getTime()) / oneDay)
-    ) + 1;
+    );
 
   for (let index = 0; index < diffFullVacation; index++) {
     const date = dateToString(new Date(startDate.getTime() + oneDay * index));

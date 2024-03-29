@@ -33,7 +33,7 @@ function getDays(from: string, to: string) {
   const diffFullVacation =
     Math.round(
       Math.abs((finishDate.getTime() - startDate.getTime()) / oneDay)
-    ) + 1;
+    );
 
   for (let index = 0; index < diffFullVacation; index++) {
     result.push(dateToString(new Date(startDate.getTime() + oneDay * index)))
